@@ -15,11 +15,27 @@ public class MyServer {
         @Autowired
         private MyServerInitializer myServerInitializer;
 
-
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup(8);
 
+        public void start() throws InterruptedException {
+            ServerBootstrap serverBootstrap = new ServerBootstrap();
 
+            serverBootstrap.group(bossGroup,workerGroup)
+                    .channel(NioServerSocketChannel.class)
+                    .childHandler(myServerInitializer);
+            ChannelFuture channelFuture = serverBootstrap.bind(7000).sync();
+            System.out.println("绑定端口完成");
+
+            channelFuture.channel().closeFuture().sync();
+
+        }
+
+        public void destory(){
+            bossGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
+
+        }
 
         public void run(){
             try{
@@ -29,13 +45,10 @@ public class MyServer {
                 serverBootstrap.group(bossGroup,workerGroup)
                         .channel(NioServerSocketChannel.class)
                         .childHandler(myServerInitializer);
-
-
                 ChannelFuture channelFuture = serverBootstrap.bind(7000).sync();
                 System.out.println("绑定端口完成");
 
                 channelFuture.channel().closeFuture().sync();
-
 
 
             } catch (InterruptedException e) {
