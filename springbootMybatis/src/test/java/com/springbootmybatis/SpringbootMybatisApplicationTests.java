@@ -1,10 +1,12 @@
 package com.springbootmybatis;
 
 import com.springbootmybatis.dao.AccountDao;
+import com.springbootmybatis.dao.OrderDao;
 import com.springbootmybatis.entity.*;
 import com.springbootmybatis.service.*;
 import com.sun.tracing.dtrace.Attributes;
 import org.junit.jupiter.api.Test;
+import org.mockito.internal.matchers.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -29,6 +31,8 @@ class SpringbootMybatisApplicationTests {
     @Autowired
     private SeckillgoodsService seckillgoodsService;
 
+    @Autowired
+    private OrderService orderService;
 
 
 
@@ -36,8 +40,11 @@ class SpringbootMybatisApplicationTests {
 
     @Test
     public void orderTest(){
+        Order order=new Order();
+        order.setId(121);
+        order.setUserId(122L);
+        orderService.insert(order);
 
-        
     }
 
 
