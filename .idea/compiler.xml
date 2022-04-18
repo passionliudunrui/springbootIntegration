@@ -7,15 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Utils" />
+        <module name="springbootMybatis" />
         <module name="springbootNetty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="springbootMybatis" target="1.8" />
       <module name="springbootNetty" target="1.8" />
+      <module name="Utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Utils" options="-parameters" />
+      <module name="springbootMybatis" options="-parameters" />
       <module name="springbootNetty" options="-parameters" />
     </option>
   </component>

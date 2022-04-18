@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Utils/Utils.iml" filepath="$PROJECT_DIR$/Utils/Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" filepath="$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootNetty/springbootNetty.iml" filepath="$PROJECT_DIR$/springbootNetty/springbootNetty.iml" />
     </modules>
   </component>
