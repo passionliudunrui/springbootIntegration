@@ -74,5 +74,6 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:2.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.3.18" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.18" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:druid:1.1.21" level="project" />
   </component>
 </module>
