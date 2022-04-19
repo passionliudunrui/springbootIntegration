@@ -6,6 +6,12 @@ spring:
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
 
+  redis:
+    host: 192.168.23.131
+    port: 6379
+    database: 0
+    connect-timeout: 10000ms
+
 mybatis:
   #    mapper-locations: classpath:mapper/*.xml
   mapper-locations: classpath*:/mapper/*.xml

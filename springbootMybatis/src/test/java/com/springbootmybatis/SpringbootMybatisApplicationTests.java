@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.internal.matchers.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 
 import javax.jws.soap.SOAPBinding;
 import java.util.Date;
@@ -34,6 +36,33 @@ class SpringbootMybatisApplicationTests {
     @Autowired
     private OrderService orderService;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    @Test
+    public void test01(){
+
+        User check = userService.check(18315624341L, "232333333333333333333333333332123432");
+        System.out.println(check);
+    }
+
+    @Test
+    public void testRedis(){
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        valueOperations.set("1","2");
+        String o = (String) valueOperations.get("1");
+        System.out.println(o);
+
+        User user=new User(1L,"nihao","dfs");
+        valueOperations.set("2",user);
+
+        User user1 = (User) valueOperations.get("2");
+        System.out.println(user1);
+
+
+
+    }
+
 
 
 
@@ -55,8 +84,6 @@ class SpringbootMybatisApplicationTests {
         seckillgoodsService.delete(12);
 
     }
-
-
 
 
 
