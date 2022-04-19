@@ -3,6 +3,8 @@ package com.springbootmybatis;
 import com.springbootmybatis.dao.AccountDao;
 import com.springbootmybatis.dao.OrderDao;
 import com.springbootmybatis.entity.*;
+import com.springbootmybatis.rabbitmq.MQReceiver;
+import com.springbootmybatis.rabbitmq.MQSender;
 import com.springbootmybatis.service.*;
 import com.sun.tracing.dtrace.Attributes;
 import org.junit.jupiter.api.Test;
@@ -38,6 +40,32 @@ class SpringbootMybatisApplicationTests {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private MQSender mqSender;
+
+    @Autowired
+    private MQReceiver mqReceiver;
+
+    @Test
+    public void testRabbitMQ(){
+        mqSender.send("hello world");
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     @Test
     public void test01(){

@@ -105,8 +105,41 @@ public class UserServiceImpl implements UserService {
         return userDao.insert(user);
     }
 
+    /**
+     * 使用延时双删的策略来解决redis和mysql中数据不一致的问题
+     * 以及并发数据不一致的问题
+     * @param user
+     * @return   !=1更新失败   ==1 更新成功
+     */
     @Override
     public int update(User user) {
-        return userDao.update(user);
+        //1.删除redis中的数据
+        ValueOperations valueOperations=redisTemplate.opsForValue();
+        redisTemplate.delete(USER_INFO+ user.getId());
+
+        //2.更新mysql中的数据
+        int resultNumber=userDao.update(user);
+        if(resultNumber!=1){
+            return 0;
+        }
+
+        //3.更新redis中的数据
+        User user1=userDao.findById(user.getId());
+        valueOperations.set(USER_INFO+user.getId(),user1);
+
+        //4.延时双删  经过一定的时间后再次将redis中的数据删除
+        /*A线程更新的时候  B线程查找
+        A线程 执行了1
+        B线程 执行了2
+        B线程执行了3
+        然后 A线程执行4
+         */
+        try{
+            Thread.sleep(50);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+
+        return resultNumber;
     }
 }

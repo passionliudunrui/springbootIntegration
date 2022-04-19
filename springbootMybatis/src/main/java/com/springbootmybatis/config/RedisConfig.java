@@ -10,6 +10,11 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 
+/**
+ * @Configuration+@Bean相当于想spring容器中注册了一个对象
+ * 在这个地方配置了redis的配置 ，然后将redisTemplate注册到容器中去
+ */
+
 @Configuration
 public class RedisConfig {
 
