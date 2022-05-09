@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SocketTest/SocketTest.iml" filepath="$PROJECT_DIR$/SocketTest/SocketTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/Utils/Utils.iml" filepath="$PROJECT_DIR$/Utils/Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootDynamicTp/springbootDynamicTp.iml" filepath="$PROJECT_DIR$/springbootDynamicTp/springbootDynamicTp.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" filepath="$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootNacos/springbootNacos.iml" filepath="$PROJECT_DIR$/springbootNacos/springbootNacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootNetty/springbootNetty.iml" filepath="$PROJECT_DIR$/springbootNetty/springbootNetty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootNettyMax/springbootNettyMax.iml" filepath="$PROJECT_DIR$/springbootNettyMax/springbootNettyMax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootRedis/springbootRedis.iml" filepath="$PROJECT_DIR$/springbootRedis/springbootRedis.iml" />
     </modules>
   </component>
 </project>

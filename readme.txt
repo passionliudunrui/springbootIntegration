@@ -2,4 +2,5 @@
 2.springbootMybatis 将所用的表的Dao层整合完毕。
 3.springbootMybatis 整合使用redis缓存。 登录模块完成。
 4.springbootMybatis 整合使用rabbitmq。
+5.springbootNettyMax 将原来的项目进行整合
 

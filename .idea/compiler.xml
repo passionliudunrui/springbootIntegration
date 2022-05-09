@@ -7,22 +7,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springbootRedis" />
         <module name="Utils" />
-        <module name="springbootMybatis" />
+        <module name="springbootNettyMax" />
+        <module name="springbootDynamicTp" />
         <module name="springbootNetty" />
+        <module name="springbootNacos" />
+        <module name="springbootMybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="springbootDynamicTp" target="1.8" />
+      <module name="springbootHippo4J" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
+      <module name="springbootNacos" target="1.8" />
       <module name="springbootNetty" target="1.8" />
+      <module name="springbootNettyMax" target="1.8" />
+      <module name="springbootRedis" target="1.8" />
       <module name="Utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Utils" options="-parameters" />
+      <module name="springbootDynamicTp" options="-parameters" />
+      <module name="springbootHippo4J" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
+      <module name="springbootNacos" options="-parameters" />
       <module name="springbootNetty" options="-parameters" />
+      <module name="springbootNettyMax" options="-parameters" />
+      <module name="springbootRedis" options="-parameters" />
     </option>
   </component>
 </project>

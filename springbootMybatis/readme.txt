@@ -117,6 +117,7 @@ resultMap解决的是 比如Student中有个属性是Card  那么如果想查询
 
 
 
+git config --global http.sslVerify "false"
 
 
 

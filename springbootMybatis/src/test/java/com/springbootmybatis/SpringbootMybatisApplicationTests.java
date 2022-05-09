@@ -69,9 +69,12 @@ class SpringbootMybatisApplicationTests {
 
     @Test
     public void test01(){
+        User user=new User(1L,"23","fds");
+        int insert = userService.insert(user);
+        System.out.println(insert);
 
-        User check = userService.check(18315624341L, "232333333333333333333333333332123432");
-        System.out.println(check);
+//        User check = userService.check(18315624341L, "232333333333333333333333333332123432");
+//        System.out.println(check);
     }
 
     @Test

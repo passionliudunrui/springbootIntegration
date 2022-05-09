@@ -1,0 +1,27 @@
+
+server:
+  port: 8888
+
+spring:
+  application:
+    name: dynamic-tp-zookeeper-demo
+  # ?????zk???????
+  dynamic:
+    tp:
+      config-type: properties # zookeeper???properties??
+      zookeeper:
+#        config-version: 1.0.0 # ?????
+        zk-connect-str: 127.0.0.1:2181 # zk???????????????
+        root-node: /configserver/userproject # ????
+        node: dynamic-tp-zookeeper-demo # ??????
+      log-path: D:\log
+
+# ??prometheus
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  endpoints:
+    web:
+      exposure:
+        include: '*'
