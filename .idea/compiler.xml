@@ -15,12 +15,14 @@
         <module name="springbootNacos" />
         <module name="springbootRedisLock" />
         <module name="springbootMybatis" />
+        <module name="springbootMybatisRedisCache" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springbootDynamicTp" target="1.8" />
       <module name="springbootHippo4J" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
+      <module name="springbootMybatisRedisCache" target="1.8" />
       <module name="springbootNacos" target="1.8" />
       <module name="springbootNetty" target="1.8" />
       <module name="springbootNettyMax" target="1.8" />
@@ -35,6 +37,7 @@
       <module name="springbootDynamicTp" options="-parameters" />
       <module name="springbootHippo4J" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
+      <module name="springbootMybatisRedisCache" options="-parameters" />
       <module name="springbootNacos" options="-parameters" />
       <module name="springbootNetty" options="-parameters" />
       <module name="springbootNettyMax" options="-parameters" />

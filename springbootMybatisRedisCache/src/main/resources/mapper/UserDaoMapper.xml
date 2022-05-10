@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springbootMybatisRedisCache.dao.UserDao">
+<!--    其实是使用了这个类  将他替换成redis就行了-->
+<!--    <cache type="org.apache.ibatis.cache.impl.PerpetualCache"/>-->
+    <cache type="com.springbootMybatisRedisCache.cache.RedisCache"/>
+
+
+    <select id="findAll" resultType="User">
+        select *
+        from t_user2;
+    </select>
+
+    <select id="findById" parameterType="String" resultType="User">
+        select *
+        from t_user2
+        where id=#{id};
+    </select>
+
+    <delete id="delete" parameterType="String">
+        delete from t_user2 where id=#{id};
+    </delete>
+
+</mapper>
