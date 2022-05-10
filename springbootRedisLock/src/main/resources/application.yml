@@ -1,0 +1,8 @@
+spring:
+  redis:
+    host: 192.168.23.133
+    port: 6379
+    database: 0
+    connect-timeout: 10000ms
+server:
+  port: 8070

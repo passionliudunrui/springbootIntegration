@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/springbootNetty/springbootNetty.iml" filepath="$PROJECT_DIR$/springbootNetty/springbootNetty.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootNettyMax/springbootNettyMax.iml" filepath="$PROJECT_DIR$/springbootNettyMax/springbootNettyMax.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootRedis/springbootRedis.iml" filepath="$PROJECT_DIR$/springbootRedis/springbootRedis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootRedisLock/springbootRedisLock.iml" filepath="$PROJECT_DIR$/springbootRedisLock/springbootRedisLock.iml" />
     </modules>
   </component>
 </project>

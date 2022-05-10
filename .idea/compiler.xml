@@ -13,6 +13,7 @@
         <module name="springbootDynamicTp" />
         <module name="springbootNetty" />
         <module name="springbootNacos" />
+        <module name="springbootRedisLock" />
         <module name="springbootMybatis" />
       </profile>
     </annotationProcessing>
@@ -24,6 +25,7 @@
       <module name="springbootNetty" target="1.8" />
       <module name="springbootNettyMax" target="1.8" />
       <module name="springbootRedis" target="1.8" />
+      <module name="springbootRedisLock" target="1.8" />
       <module name="Utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -37,6 +39,7 @@
       <module name="springbootNetty" options="-parameters" />
       <module name="springbootNettyMax" options="-parameters" />
       <module name="springbootRedis" options="-parameters" />
+      <module name="springbootRedisLock" options="-parameters" />
     </option>
   </component>
 </project>
