@@ -1,6 +1,7 @@
 package com.springbootRedisLock;
 
 import org.redisson.Redisson;
+import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -57,6 +58,25 @@ public class IndexController {
      *
      *
      */
+
+
+    @RequestMapping("/testBloom")
+    public String bloom(){
+        RBloomFilter<String> test = redisson.getBloomFilter("test");
+        test.tryInit(1000L,0.2);
+        test.add("1");
+        test.add("2");
+
+        boolean contains = test.contains("3");
+        boolean contains1 = test.contains("2");
+
+        System.out.println(contains);
+        System.out.println(contains1);
+
+        return "ok";
+
+    }
+
 
     @RequestMapping("/deduct_stock")
     public String deductStock() throws Exception{

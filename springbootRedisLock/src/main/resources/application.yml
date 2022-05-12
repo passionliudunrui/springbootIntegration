@@ -4,5 +4,10 @@ spring:
     port: 6379
     database: 0
     connect-timeout: 10000ms
+  main:
+    allow-bean-definition-overriding: true
 server:
   port: 8070
+#redisson:
+#  redis:
+#    address: 192.168.23.133
