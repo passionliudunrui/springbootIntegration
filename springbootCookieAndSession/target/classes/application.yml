@@ -6,6 +6,22 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      pool-name: DateHikariCP
+
+      minimum-idle: 5
+
+      idle-timeout: 180000
+
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 120000
+
+      connection-timeout: 30000
+
+      connection-test-query: SELECT 1
+
   thymeleaf:
     cache: false # ???????,??????????
     prefix: classpath:/templates/
@@ -15,3 +31,8 @@ spring:
     servlet:
       content-type: text/html
       mode:  HTML
+  redis:
+    host: 192.168.23.133
+    port: 6379
+    database: 0
+    connect-timeout: 10000ms

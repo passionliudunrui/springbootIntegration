@@ -9,6 +9,23 @@
 <body>
   fdsafdsaf
 
+  <form class="layui-form" th:action="@{/user/doSomething}">
+    <div class="layui-form-item">
+      <label class="layui-form-label">
+        用户名：
+      </label>
+      <div class="layui-input-inline">
+        <input type="text" name="test1" class="layui-input" required lay-verify="required" placeholder="随便输入"><br>
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <div class="layui-input-block">
+        <button class="layui-btn" type="submit">登录</button>
+      </div>
+    </div>
+  </form>
+
 
 <script type="text/javascript">
   layui.use(['element','form'],function () {
