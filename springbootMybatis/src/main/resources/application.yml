@@ -1,6 +1,6 @@
 spring:
   rabbitmq:
-    host: 192.168.23.131
+    host: 192.168.23.133
     username: guest
     password: guest
     virtual-host: /
@@ -33,12 +33,25 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 
   redis:
-    host: 192.168.23.131
+    host: 192.168.23.133
     port: 6379
     database: 0
     connect-timeout: 10000ms
+  main:
+    allow-circular-references: true
 
 mybatis:
   #    mapper-locations: classpath:mapper/*.xml
   mapper-locations: classpath*:/mapper/*.xml
   type-aliases-package: com.springbootmybatis.entity
+
+# 分页插件
+pagehelper:
+  # 指定数据库
+  helper-dialect: mysql
+  # 分页合理化参数，默认值为false。当该参数设置为 true 时，pageNum<=0 时会查询第一页
+  reasonable: false
+  # 支持通过 Mapper 接口参数来传递分页参数，默认值false
+  support-methods-arguments: true
+  params: count=countSql
+

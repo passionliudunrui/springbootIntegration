@@ -16,9 +16,11 @@
         <module name="springbootRedisLock" />
         <module name="springbootMybatis" />
         <module name="springbootMybatisRedisCache" />
+        <module name="springbootCookieAndSession" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="springbootCookieAndSession" target="1.8" />
       <module name="springbootDynamicTp" target="1.8" />
       <module name="springbootHippo4J" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
@@ -34,6 +36,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Utils" options="-parameters" />
+      <module name="springbootCookieAndSession" options="-parameters" />
       <module name="springbootDynamicTp" options="-parameters" />
       <module name="springbootHippo4J" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />

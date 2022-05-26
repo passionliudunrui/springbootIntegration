@@ -1,5 +1,6 @@
 package com.springbootmybatis;
 
+import com.github.pagehelper.PageHelper;
 import com.springbootmybatis.dao.AccountDao;
 import com.springbootmybatis.dao.OrderDao;
 import com.springbootmybatis.entity.*;
@@ -46,6 +47,15 @@ class SpringbootMybatisApplicationTests {
 
     @Autowired
     private MQReceiver mqReceiver;
+
+
+
+
+
+
+
+
+
 
     @Test
     public void testRabbitMQ(){
@@ -134,8 +144,11 @@ class SpringbootMybatisApplicationTests {
 
     }
 
+
+
     @Test
     public void testFind(){
+        PageHelper.startPage(80,2);
         List<Note> notes = noteService.findById(11L);
         for(Note note:notes){
             System.out.println(note);

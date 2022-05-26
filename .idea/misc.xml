@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/springbootDynamicTp/pom.xml" />
         <option value="$PROJECT_DIR$/springbootRedisLock/pom.xml" />
         <option value="$PROJECT_DIR$/springbootMybatisRedisCache/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootCookieAndSession/pom.xml" />
       </list>
     </option>
   </component>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 
 @RestController
@@ -62,6 +63,7 @@ public class IndexController {
 
     @RequestMapping("/testBloom")
     public String bloom(){
+
         RBloomFilter<String> test = redisson.getBloomFilter("test");
         test.tryInit(1000L,0.2);
         test.add("1");

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SocketTest/SocketTest.iml" filepath="$PROJECT_DIR$/SocketTest/SocketTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/Utils/Utils.iml" filepath="$PROJECT_DIR$/Utils/Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootCookieAndSession/springbootCookieAndSession.iml" filepath="$PROJECT_DIR$/springbootCookieAndSession/springbootCookieAndSession.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootDynamicTp/springbootDynamicTp.iml" filepath="$PROJECT_DIR$/springbootDynamicTp/springbootDynamicTp.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" filepath="$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootMybatisRedisCache/springbootMybatisRedisCache.iml" filepath="$PROJECT_DIR$/springbootMybatisRedisCache/springbootMybatisRedisCache.iml" />
