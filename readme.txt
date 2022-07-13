@@ -5,6 +5,7 @@
 7.springbootRedisLock  redis实现分布式锁并且整合布隆过滤器
 8.springbootMybatisRedisCache mybatis整合redis实现二级缓存 （代码有点问题）具体看springboot-redis
 9.springbootCookieAndSession   springboot整合thymeleaf 并且实现cookie和session的交互
+10.Quartz springboot整合Quartz框架 实现分布式定时任务
 
 
 For Spring

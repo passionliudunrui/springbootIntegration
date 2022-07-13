@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Quartz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Utils/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootCookieAndSession/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootCookieAndSession/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootDynamicTp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootHippo4J/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootMybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootMybatisRedisCache/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootNacos/src/main/java" charset="UTF-8" />
@@ -11,6 +14,5 @@
     <file url="file://$PROJECT_DIR$/springbootNettyMax/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootRedis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootRedisLock/src/main/java" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

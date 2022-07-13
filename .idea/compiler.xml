@@ -7,20 +7,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springbootRedis" />
-        <module name="Utils" />
         <module name="springbootNettyMax" />
         <module name="springbootDynamicTp" />
+        <module name="springbootRedisLock" />
+        <module name="springbootRedis" />
+        <module name="springbootHippo4J" />
         <module name="springbootNetty" />
         <module name="springbootNacos" />
-        <module name="springbootRedisLock" />
-        <module name="springbootMybatis" />
         <module name="springbootMybatisRedisCache" />
-        <module name="springbootCookieAndSession" />
+        <module name="demo" />
+        <module name="springbootMybatis" />
+        <module name="Quartz" />
+        <module name="Utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springbootCookieAndSession" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="Quartz" target="1.8" />
       <module name="springbootDynamicTp" target="1.8" />
       <module name="springbootHippo4J" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
@@ -35,8 +38,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Quartz" options="-parameters" />
       <module name="Utils" options="-parameters" />
-      <module name="springbootCookieAndSession" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="springbootDynamicTp" options="-parameters" />
       <module name="springbootHippo4J" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
