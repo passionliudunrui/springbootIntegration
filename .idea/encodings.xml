@@ -14,5 +14,9 @@
     <file url="file://$PROJECT_DIR$/springbootNettyMax/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootRedis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootRedisLock/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootRocketMQ/demoProducer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootRocketMQ/demofirst/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootRocketMQ/demothird/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootRocketMQ/punchsysten/src/main/java" charset="UTF-8" />
   </component>
 </project>

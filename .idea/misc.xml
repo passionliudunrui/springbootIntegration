@@ -18,6 +18,11 @@
         <option value="$PROJECT_DIR$/springbootDynamicTp/pom.xml" />
         <option value="$PROJECT_DIR$/springbootCookieAndSession/pom.xml" />
         <option value="$PROJECT_DIR$/Quartz/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootRocketMQ/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootRocketMQ/demothird/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootRocketMQ/demofirst/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootRocketMQ/demoProducer/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootRocketMQ/punchsysten/pom.xml" />
       </list>
     </option>
   </component>

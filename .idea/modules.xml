@@ -5,6 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/Quartz/Quartz.iml" filepath="$PROJECT_DIR$/Quartz/Quartz.iml" />
       <module fileurl="file://$PROJECT_DIR$/Utils/Utils.iml" filepath="$PROJECT_DIR$/Utils/Utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootCookieAndSession/demo.iml" filepath="$PROJECT_DIR$/springbootCookieAndSession/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootRocketMQ/demoProducer/demoProducer.iml" filepath="$PROJECT_DIR$/springbootRocketMQ/demoProducer/demoProducer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootRocketMQ/demofirst/demofirst.iml" filepath="$PROJECT_DIR$/springbootRocketMQ/demofirst/demofirst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootRocketMQ/demothird/demothird.iml" filepath="$PROJECT_DIR$/springbootRocketMQ/demothird/demothird.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootRocketMQ/punchsysten/punchsysten.iml" filepath="$PROJECT_DIR$/springbootRocketMQ/punchsysten/punchsysten.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootDynamicTp/springbootDynamicTp.iml" filepath="$PROJECT_DIR$/springbootDynamicTp/springbootDynamicTp.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootHippo4J/springbootHippo4J.iml" filepath="$PROJECT_DIR$/springbootHippo4J/springbootHippo4J.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springbootIntegration.iml" filepath="$PROJECT_DIR$/.idea/springbootIntegration.iml" />
@@ -15,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/springbootNettyMax/springbootNettyMax.iml" filepath="$PROJECT_DIR$/springbootNettyMax/springbootNettyMax.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootRedis/springbootRedis.iml" filepath="$PROJECT_DIR$/springbootRedis/springbootRedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootRedisLock/springbootRedisLock.iml" filepath="$PROJECT_DIR$/springbootRedisLock/springbootRedisLock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootRocketMQ/springbootRocketMQ.iml" filepath="$PROJECT_DIR$/springbootRocketMQ/springbootRocketMQ.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,9 @@
+#rocketmq:
+#  name-server: localhost:9876   #配置RocketMQ的name server
+#  producer:
+#    group: producer     # 配置消息生产者的group，必须配置
+
+rocketmq:
+  name-server: 192.168.112.128:9876
+  producer:
+    group: my-producer-group  #生产者的名字

@@ -7,23 +7,41 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springbootNettyMax" />
-        <module name="springbootDynamicTp" />
-        <module name="springbootRedisLock" />
-        <module name="springbootRedis" />
-        <module name="springbootHippo4J" />
-        <module name="springbootNetty" />
-        <module name="springbootNacos" />
-        <module name="springbootMybatisRedisCache" />
-        <module name="demo" />
         <module name="springbootMybatis" />
-        <module name="Quartz" />
         <module name="Utils" />
+        <module name="springbootDynamicTp" />
+        <module name="demo" />
+        <module name="demoone" />
+        <module name="springbootNacos" />
+        <module name="demofirst" />
+        <module name="demothird" />
+        <module name="springbootMybatisRedisCache" />
+        <module name="punchsysten" />
+        <module name="demo1" />
+        <module name="demoProducer" />
+        <module name="springbootRedis" />
+        <module name="springbootRocketMQ" />
+        <module name="springbootHippo4J" />
+        <module name="Quartz" />
+        <module name="springbootNettyMax" />
+        <module name="springbootNetty" />
+        <module name="SpringbootRocketMQ" />
+        <module name="springbootRedisLock" />
+        <module name="springbootCookieAndSession" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="1.8" />
+      <module name="demo1" target="1.8" />
+      <module name="demofiith" target="1.8" />
+      <module name="demofirst" target="1.8" />
+      <module name="demoone" target="1.8" />
+      <module name="demoProducer" target="1.8" />
+      <module name="demosecond" target="1.8" />
+      <module name="demothird" target="1.8" />
+      <module name="punchsysten" target="1.8" />
       <module name="Quartz" target="1.8" />
+      <module name="springbootCookieAndSession" target="1.8" />
       <module name="springbootDynamicTp" target="1.8" />
       <module name="springbootHippo4J" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
@@ -33,6 +51,8 @@
       <module name="springbootNettyMax" target="1.8" />
       <module name="springbootRedis" target="1.8" />
       <module name="springbootRedisLock" target="1.8" />
+      <module name="SpringbootRocketMQ" target="1.5" />
+      <module name="springbootRocketMQ" target="1.5" />
       <module name="Utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -41,6 +61,15 @@
       <module name="Quartz" options="-parameters" />
       <module name="Utils" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="demo1" options="-parameters" />
+      <module name="demoProducer" options="-parameters" />
+      <module name="demofiith" options="-parameters" />
+      <module name="demofirst" options="-parameters" />
+      <module name="demoone" options="-parameters" />
+      <module name="demosecond" options="-parameters" />
+      <module name="demothird" options="-parameters" />
+      <module name="punchsysten" options="-parameters" />
+      <module name="springbootCookieAndSession" options="-parameters" />
       <module name="springbootDynamicTp" options="-parameters" />
       <module name="springbootHippo4J" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
