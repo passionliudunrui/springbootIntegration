@@ -1,14 +1,12 @@
 package com.punchsysten.controller;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-
 import com.punchsysten.eneity.User;
 import com.punchsysten.pool.MyThreadPool;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.consumer.DefaultMQPullConsumer;
 import org.apache.rocketmq.client.consumer.PullResult;
+import org.apache.rocketmq.client.consumer.store.OffsetStore;
 import org.apache.rocketmq.client.producer.*;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageExt;
@@ -16,13 +14,10 @@ import org.apache.rocketmq.common.message.MessageQueue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import thread.MyThread;
-
+import com.punchsysten.thread.MyThread;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
 
 
 @Slf4j
@@ -43,9 +38,9 @@ public class ProducerController {
      */
     @GetMapping("/sendMessage")
     public void sendMsg() {
-        log.info("进入发送普通消息方法，发送5个用户==={}", defaultProducer.toString());
+
         User user = new User();
-        for (int i = 0; i < 1300; i++) {
+        for (int i = 0; i < 10; i++) {
             user.setId(String.valueOf(i));
             user.setUserName("passion " + i);
 //            String json = JSON.toJSONString(user);
@@ -53,7 +48,7 @@ public class ProducerController {
 
 
 
-            Message msg = new Message("user-topic5", "white", user.toString().getBytes());
+            Message msg = new Message("user-topic10", "white", user.toString().getBytes());
             try {
 
                 //同步发送
@@ -75,22 +70,22 @@ public class ProducerController {
     public void testConsumer() throws Exception {
 
 
-        DefaultMQPullConsumer consumer = new DefaultMQPullConsumer("user_consumer_group1");
+        DefaultMQPullConsumer consumer = new DefaultMQPullConsumer("user_consumer_group2");
         consumer.setNamesrvAddr("127.0.0.1:9876");
         consumer.setInstanceName("user_consumer_instance");
         consumer.start();
         System.out.println("消费者创建完成");
 
-        Set<MessageQueue> messageQueues = consumer.fetchSubscribeMessageQueues("user-topic5");
+        Set<MessageQueue> messageQueues = consumer.fetchSubscribeMessageQueues("user-topic10");
 
 
         while(true){
 
             for (MessageQueue queue : messageQueues){
-                if (queue1.size() >= 100) {
+                if (queue1.size() >= 4) {
 
                     ArrayList<String> arrayList = new ArrayList<>(queue1);
-                    MyThread myThread = new MyThread(arrayList);
+                    MyThread myThread=new MyThread(arrayList);
                     MyThreadPool.executorService.submit(myThread);
                     queue1.clear();
 
@@ -102,7 +97,9 @@ public class ProducerController {
 //                System.out.println("consumer from the queue:" + queue + ":" + offset);
 
                 PullResult pullResult = consumer.pull(queue, null, consumer.fetchConsumeOffset(queue, false), 1);
-                consumer.updateConsumeOffset(queue, pullResult.getNextBeginOffset());
+                long maxOffset = pullResult.getMaxOffset();
+                log.info(maxOffset+"位置");
+
 
                 switch (pullResult.getPullStatus()) {
                     case FOUND:
@@ -117,10 +114,13 @@ public class ProducerController {
                             String ans = new String(m.getBody());
                             System.out.println("拉取数据" + ans);
                             queue1.add(ans);
-                            if (queue1.size() >= 100) {
+                            if (queue1.size() >= 4) {
                                 break;
                             }
                         }
+
+                        consumer.updateConsumeOffset(queue, pullResult.getNextBeginOffset());
+
                         break;
                     case NO_MATCHED_MSG:
                         break;
