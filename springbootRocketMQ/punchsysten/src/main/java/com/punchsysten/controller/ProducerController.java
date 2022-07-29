@@ -48,7 +48,7 @@ public class ProducerController {
 
 
 
-            Message msg = new Message("user-topic10", "white", user.toString().getBytes());
+            Message msg = new Message("user-topic44", "white", user.toString().getBytes());
             try {
 
                 //同步发送
